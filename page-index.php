@@ -202,11 +202,18 @@
         </div>
     </div>
     <div class="news-block">   
-        <ul>
-             <li></li>
-             <li></li>
-             <li></li>
-         </ul> 
+        <?php $postslist = get_posts('numberposts=6&orderby=title&order=ASC&category=2'); ?>
+                <? $i=0 ?>
+            <ul>
+            <?php foreach ($postslist as $post) : setup_postdata($post); ?>
+            <li class="sellers item<?=++$i ?>">
+                <h4><?php the_title();?></h4>
+                <?php the_post_thumbnail(array(250,151)); ?>   
+                <div class="excerpt"><?php the_excerpt(); ?></div>
+                <a class="fancybox" data-fancybox-type="ajax" href="<?php echo get_permalink(); ?>">Продолжить чтение</a>
+            </li>
+            <?php endforeach; ?>
+            </ul>
     </div>
     <div class="center-wrapper carousel-wrapper">
         <div class="next-button"></div>
