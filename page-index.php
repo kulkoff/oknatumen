@@ -201,19 +201,19 @@
             </div>
         </div>
     </div>
-    <div class="news-block">   
-        <?php $postslist = get_posts('numberposts=6&orderby=title&order=ASC&category=2'); ?>
+    <div class="news-block"> 
+        <div class="center-wrapper">  
+        <?php $postslist = get_posts('numberposts=6&orderby=title&order=ASC&category=4'); ?>
                 <? $i=0 ?>
             <ul>
             <?php foreach ($postslist as $post) : setup_postdata($post); ?>
             <li class="news item<?=++$i ?>">
-                <h4><?php the_title();?></h4>
-                <?php the_post_thumbnail(array(250,151)); ?>   
-                <div class="excerpt"><?php the_excerpt(); ?></div>
-                <a class="fancybox" data-fancybox-type="ajax" href="<?php echo get_permalink(); ?>">Продолжить чтение</a>
+                <?php the_post_thumbnail(array(311,169)); ?>   
+                <a class="fancybox" data-fancybox-type="ajax" href="<?php echo get_permalink(); ?>"><?php the_title();?></a>
             </li>
             <?php endforeach; ?>
             </ul>
+
     </div>
     <div class="center-wrapper carousel-wrapper">
         <div class="next-button"></div>
