@@ -206,7 +206,7 @@
                 <? $i=0 ?>
             <ul>
             <?php foreach ($postslist as $post) : setup_postdata($post); ?>
-            <li class="sellers item<?=++$i ?>">
+            <li class="news item<?=++$i ?>">
                 <h4><?php the_title();?></h4>
                 <?php the_post_thumbnail(array(250,151)); ?>   
                 <div class="excerpt"><?php the_excerpt(); ?></div>
