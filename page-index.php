@@ -201,6 +201,13 @@
             </div>
         </div>
     </div>
+    <div class="news-block">   
+        <ul>
+             <li></li>
+             <li></li>
+             <li></li>
+         </ul> 
+    </div>
     <div class="center-wrapper carousel-wrapper">
         <div class="next-button"></div>
         <div class="prev-button"></div>
